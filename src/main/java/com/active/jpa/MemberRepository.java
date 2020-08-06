@@ -1,5 +1,6 @@
 package com.active.jpa;
 
+import com.active.jpa.domain.Member;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;

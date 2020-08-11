@@ -8,6 +8,7 @@ import com.active.jpa.domain.item.Item;
 import com.active.jpa.repository.ItemRepository;
 import com.active.jpa.repository.MemberRepository;
 import com.active.jpa.repository.OrderRepository;
+import com.active.jpa.repository.OrderSearch;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -52,8 +53,8 @@ public class OrderService {
         order.cancel();
     }
 
-//    @Transactional
-//    public List<Order> findOrder(Ordersearch ordersearch) {
-//
-//    }
+    @Transactional
+    public List<Order> findOrder(OrderSearch orderSearch) {
+        return orderRepository.findAllByCriteria(orderSearch);
+    }
 }

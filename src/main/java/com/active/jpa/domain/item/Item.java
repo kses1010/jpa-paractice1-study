@@ -3,11 +3,13 @@ package com.active.jpa.domain.item;
 import com.active.jpa.domain.Category;
 import com.active.jpa.exception.NotEnoughStockException;
 import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Setter
 @Getter
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)

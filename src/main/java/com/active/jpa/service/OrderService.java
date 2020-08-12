@@ -54,7 +54,7 @@ public class OrderService {
     }
 
     @Transactional
-    public List<Order> findOrder(OrderSearch orderSearch) {
+    public List<Order> findOrders(OrderSearch orderSearch) {
         return orderRepository.findAllByCriteria(orderSearch);
     }
 }
